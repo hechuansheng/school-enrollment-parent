@@ -37,6 +37,6 @@ spring:
 #打印sql
 logging:
   level:
-    com.sjy.eduplatform.enroll.dao.mapperm: debug
+    com.sjy.eduplatform.enroll.dao.mapper: debug
 
 

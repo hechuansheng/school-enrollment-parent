@@ -1,4 +1,4 @@
-package com.sjy.eduplatform.enroll.app.controller;
+package com.sjy.eduplatform.enroll.application.controller;
 
 /**
  * @author : hechuansheng

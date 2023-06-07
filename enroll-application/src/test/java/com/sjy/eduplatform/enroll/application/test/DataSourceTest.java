@@ -1,4 +1,4 @@
-package com.sjy.eduplatform.enroll.app.test;
+package com.sjy.eduplatform.enroll.application.test;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;

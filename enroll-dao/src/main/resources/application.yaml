@@ -1,0 +1,10 @@
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.sjy.eduplatform.enroll.model.entity
+  global-config:
+    db-config:
+      id-type: AUTO
+      table-underline: true
+      insert-strategy: not_empty
+      update-strategy: not_empty
