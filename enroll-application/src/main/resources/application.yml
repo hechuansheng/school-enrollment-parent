@@ -1,0 +1,21 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: gougou-server
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 300MB
+      max-request-size: 300MB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "info,health"
+  endpoint:
+    health:
+      show-details: always

@@ -1,0 +1,6 @@
+# Project exclude paths
+/enroll-application/target/
+/enroll-business/target/
+/enroll-common/target/
+/enroll-dao/target/
+/enroll-model/target/

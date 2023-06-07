@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sjy.eduplatform</groupId>
+    <artifactId>school-enrollment-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <modules>
+        <module>enroll-application</module>
+        <module>enroll-business</module>
+        <module>enroll-dao</module>
+        <module>enroll-common</module>
+        <module>enroll-model</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.13</version>
+    </parent>
+
+    <repositories>
+        <repository>
+            <id>aliyun-releases</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <spring-boot-verision>2.6.13</spring-boot-verision>
+        <lombok.version>1.18.24</lombok.version>
+        <junit.version>4.13.2</junit.version>
+        <commons-lang3-version>3.1</commons-lang3-version>
+<!--        <mysql-connector-java-version>8.0.11</mysql-connector-java-version>-->
+<!--        <mybatis-spring-boot-starter-version>1.3.1</mybatis-spring-boot-starter-version>-->
+        <mybatis-plus-boot-starter-version>3.5.2</mybatis-plus-boot-starter-version>
+        <druid-spring-boot-starter-version>1.1.22</druid-spring-boot-starter-version>
+        <redisson-spring-data-26-version>3.22.0</redisson-spring-data-26-version>
+        <qiniu-java-sdk-version>7.11.0</qiniu-java-sdk-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3-version}</version>
+            </dependency>
+
+<!--            &lt;!&ndash; https://mvnrepository.com/artifact/mysql/mysql-connector-java &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>mysql</groupId>-->
+<!--                <artifactId>mysql-connector-java</artifactId>-->
+<!--                <version>${mysql-connector-java-version}</version>-->
+<!--            </dependency>-->
+
+            <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter-version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot-starter-version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.redisson/redisson-spring-data-26 -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-data-26</artifactId>
+                <version>${redisson-spring-data-26-version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-spring-boot-starter-version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.qiniu/qiniu-java-sdk -->
+            <dependency>
+                <groupId>com.qiniu</groupId>
+                <artifactId>qiniu-java-sdk</artifactId>
+                <version>${qiniu-java-sdk-version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

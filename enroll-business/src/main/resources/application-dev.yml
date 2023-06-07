@@ -1,0 +1,38 @@
+spring:
+  cache:
+    type: redis
+    redis:
+      time-to-live: 120s
+      use-key-prefix: true
+  redis:
+    port: 6379
+    host: localhost
+    password: R123qweasd
+    database: 1
+    jedis:
+      pool:
+        max-active: 20
+        max-wait: -1
+        min-idle: 0
+    testOnBorrow: true
+    timeout: 20000
+
+#七牛云配置
+qiniu:
+  bucket: testgogoquestionbank
+  qiniuDomain: https://res.test.gogoquestionbank.gg66.cn/
+  qiniuEndpoint: https://up-z2.qiniup.com
+  headBucket: evaldaily
+  headImageDomain: https://res.daily.eval.jyjy.cn/
+  headImageEndpoint: https://up.qiniup.com
+  laTexBucket: gogolateximage
+  laTexDomain: http://res-temp.gg66.cn/
+  laTexEndpoint: https://up-z2.qiniup.com
+  pdfBucket: evaldaily
+  pdfDomain: https://res.daily.eval.jyjy.cn/
+  pdfEndpoint: https://up.qiniup.com
+
+
+logging:
+  level:
+    com.sjy.eduplatform.enroll.business: debug
